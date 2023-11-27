@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAB PRICE ESTIMATION</title>
+     <style>
+        body {
+            font-family: Calibri;
+            color:#800000;
+            background-color: Black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login {
+            text-align: center;
+        }
+        .title-frame {
+            border: 2px solid #c2b280 ;  /* Replace #000000 with the border color you want */
+            padding: 10px;
+            display: inline-block;
+            animation: blink 2s infinite;
+            background-color: #c2b280 ;
+        }
+         @keyframes blink {
+            10% {
+                opacity: 0; /* Make the element disappear at 50% of the animation */
+            }
+        }
+        form {
+            margin-top: 20px;
+        }
+
+    </style>
+    <link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"/>
+<link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"/>
+<link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"/>
+<link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div class="login">
+    <div class="title-frame">
+    <h1>Predict Price charged</h1>
+    </div>
+  <form action="{{url_for('predict')}}" method="post">
+    <input type="text" name="KM travelled" placeholder="Distance in KM" required="required"/>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Estimate</button>
+  </form>
+    <br>
+    <br>
+    {{prediction_text}}
+</div>
+
+</body>
+</html>

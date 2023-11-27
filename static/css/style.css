@@ -1,0 +1,19 @@
+/* Add your styles here */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.login {
+    text-align: center;
+}
+
+.title-frame {
+    border: 2px solid #be0032;
+    padding: 10px;
+    display: inline-block;
+}
+
+form {
+    margin-top: 20px;
+}
